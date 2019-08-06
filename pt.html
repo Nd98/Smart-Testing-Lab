@@ -7,7 +7,7 @@
     <title>PT</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>
+<body style="background: url('bg.jpg');">
 
     <div style="display: flex;justify-content:center;align-items:center;margin-top:100px">
         <div class="container">
@@ -31,16 +31,14 @@
                         <label for="flowrate">Flow-Rate</label>
                         <input type="text" class="form-control" id="flowrate" readonly placeholder="12 sccm">
                     </div>
-                    <div class="form-group">
-                        <label for="diameter">Diameter</label>
-                        <input type="text" class="form-control" readonly id="diameter" placeholder="4 cm">
-                    </div>
-                    <a type="submit" href="index.html" class="btn btn-primary">End Test</a>
+                    <a type="submit" href="result.html" class="btn btn-primary">End Test</a>
                 </form>
             </div>
             <div id="video" hidden style="display:flex;justify-content:center;align-items:center;flex-direction: column"> 
-                <iframe id="myvideo" width="560" height="315" src="https://www.youtube.com/embed/SJCfdQ4T4oY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="myvideo" width="560" height="315" src="https://www.youtube.com/embed/ztXz8asFw-o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
                 <a type="submit" href="result.html" class="btn btn-primary mt-2">Go To Result</a>
+                <button onclick="hideVideo();" class="btn btn-primary mt-2">Back To Test</button>
             </div>
         </div>
     </div>
@@ -61,6 +59,12 @@
             elem.msRequestFullscreen();
             }
         }
+
+        function hideVideo(){
+            document.getElementById('formpt').hidden = false;
+            document.getElementById('video').hidden = true;
+        }
+
     </script>
 
     
